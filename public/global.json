@@ -1,6 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/revisit-studies/study/v2.4.1/src/parser/GlobalConfigSchema.json",
   "configsList": [
+    "vis-decode-eye-tracking",
     "vis-decode-slider",
     "vis-decode-retrieve-value",
     "tutorial",
@@ -57,6 +58,9 @@
     "test-step-logic"
   ],
   "configs": {
+    "vis-decode-eye-tracking": {
+      "path": "vis-decode-eye-tracking/config.json"
+    },
     "vis-decode-retrieve-value": {
       "path": "vis-decode-retrieve-value/config-r.json"
     },

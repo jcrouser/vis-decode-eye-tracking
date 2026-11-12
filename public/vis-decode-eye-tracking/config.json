@@ -1,0 +1,953 @@
+{
+  "$schema": "../../src/parser/StudyConfigSchema.json",
+  "studyMetadata": {
+    "title": "Visual Decoding \u00b7 Eye-tracking Pilot",
+    "version": "0.1",
+    "authors": [
+      "R. Jordan Crouser"
+    ],
+    "date": "2026-11-12",
+    "description": "Five-task instrumented pilot using the visual decoding study components.",
+    "organizations": [
+      "Smith College"
+    ]
+  },
+  "uiConfig": {
+    "contactEmail": "",
+    "helpTextPath": "vis-decode-eye-tracking/assets/introduction.md",
+    "logoPath": "revisitAssets/revisitLogoSquare.svg",
+    "withProgressBar": true,
+    "withSidebar": false,
+    "autoDownloadStudy": true
+  },
+  "baseComponents": {
+    "trial": {
+      "type": "react-component",
+      "path": "vis-decode-eye-tracking/assets/Pilot.tsx",
+      "instructionLocation": "aboveStimulus",
+      "nextButtonLocation": "belowStimulus",
+      "response": [
+        {
+          "id": "pilot-record",
+          "type": "reactive",
+          "prompt": "Trial record",
+          "hidden": true
+        }
+      ]
+    }
+  },
+  "components": {
+    "introduction": {
+      "type": "markdown",
+      "path": "vis-decode-eye-tracking/assets/introduction.md",
+      "response": []
+    },
+    "finish": {
+      "type": "markdown",
+      "path": "vis-decode-eye-tracking/assets/finish.md",
+      "response": []
+    },
+    "cdf_curve-1": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-1",
+        "task": "cdf_curve",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_curve-2": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-2",
+        "task": "cdf_curve",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.65,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_curve-3": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-3",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -1.25,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_curve-4": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-4",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.6,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_curve-5": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-5",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.050000000000000044,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_curve-6": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-6",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.050000000000000044,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_curve-7": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-7",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.6,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_curve-8": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to where the cumulative probability is 0.5.",
+      "parameters": {
+        "trialId": "cdf_curve-8",
+        "task": "cdf_curve",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 1.25,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_axis-1": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-1",
+        "task": "cdf_axis",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_axis-2": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-2",
+        "task": "cdf_axis",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.65,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_axis-3": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-3",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -1.25,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_axis-4": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-4",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.6,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_axis-5": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-5",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.050000000000000044,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_axis-6": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-6",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.050000000000000044,
+          "y": 0.25
+        }
+      }
+    },
+    "cdf_axis-7": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-7",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.6,
+          "y": 0.75
+        }
+      }
+    },
+    "cdf_axis-8": {
+      "baseComponent": "trial",
+      "instruction": "Find where the curve crosses cumulative probability 0.5. Project that position down to the x-axis and place the ball there.",
+      "parameters": {
+        "trialId": "cdf_axis-8",
+        "task": "cdf_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 1.25,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_peak-1": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-1",
+        "task": "pdf_peak",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_peak-2": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-2",
+        "task": "pdf_peak",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.65,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_peak-3": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-3",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -1.25,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_peak-4": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-4",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.6,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_peak-5": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-5",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.050000000000000044,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_peak-6": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-6",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.050000000000000044,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_peak-7": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-7",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.6,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_peak-8": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve to its highest point.",
+      "parameters": {
+        "trialId": "pdf_peak-8",
+        "task": "pdf_peak",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 1.25,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_area-1": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-1",
+        "task": "pdf_area",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_area-2": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-2",
+        "task": "pdf_area",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.65,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_area-3": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-3",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -1.25,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_area-4": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-4",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.6,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_area-5": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-5",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.050000000000000044,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_area-6": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-6",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.050000000000000044,
+          "y": 0.25
+        }
+      }
+    },
+    "pdf_area-7": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-7",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.6,
+          "y": 0.75
+        }
+      }
+    },
+    "pdf_area-8": {
+      "baseComponent": "trial",
+      "instruction": "Move the ball along the curve until a hypothetical vertical line through it divides the area into two equal halves.",
+      "parameters": {
+        "trialId": "pdf_area-8",
+        "task": "pdf_area",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 1.25,
+          "y": 0.25
+        }
+      }
+    },
+    "dot_axis-1": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-1",
+        "task": "dot_axis",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0,
+          "y": 0.75
+        }
+      }
+    },
+    "dot_axis-2": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-2",
+        "task": "dot_axis",
+        "practice": true,
+        "params": {
+          "mu": 0,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.65,
+          "y": 0.25
+        }
+      }
+    },
+    "dot_axis-3": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-3",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -1.25,
+          "y": 0.75
+        }
+      }
+    },
+    "dot_axis-4": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-4",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.6,
+          "y": 0.25
+        }
+      }
+    },
+    "dot_axis-5": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-5",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": -0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.050000000000000044,
+          "y": 0.75
+        }
+      }
+    },
+    "dot_axis-6": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-6",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": -0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": -0.050000000000000044,
+          "y": 0.25
+        }
+      }
+    },
+    "dot_axis-7": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-7",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 0.6,
+          "y": 0.75
+        }
+      }
+    },
+    "dot_axis-8": {
+      "baseComponent": "trial",
+      "instruction": "Project the blue dot down to the x-axis. Place the red ball at the corresponding x position.",
+      "parameters": {
+        "trialId": "dot_axis-8",
+        "task": "dot_axis",
+        "practice": false,
+        "params": {
+          "mu": 0.6,
+          "sigma": 0.8,
+          "lambda": 0.65,
+          "p": 2,
+          "q": 10
+        },
+        "dot": {
+          "x": 1.25,
+          "y": 0.25
+        }
+      }
+    }
+  },
+  "sequence": {
+    "order": "fixed",
+    "components": [
+      "introduction",
+      {
+        "order": "random",
+        "components": [
+          {
+            "order": "fixed",
+            "components": [
+              "cdf_curve-1",
+              "cdf_curve-2",
+              {
+                "order": "random",
+                "components": [
+                  "cdf_curve-3",
+                  "cdf_curve-4",
+                  "cdf_curve-5",
+                  "cdf_curve-6",
+                  "cdf_curve-7",
+                  "cdf_curve-8"
+                ]
+              }
+            ]
+          },
+          {
+            "order": "fixed",
+            "components": [
+              "cdf_axis-1",
+              "cdf_axis-2",
+              {
+                "order": "random",
+                "components": [
+                  "cdf_axis-3",
+                  "cdf_axis-4",
+                  "cdf_axis-5",
+                  "cdf_axis-6",
+                  "cdf_axis-7",
+                  "cdf_axis-8"
+                ]
+              }
+            ]
+          },
+          {
+            "order": "fixed",
+            "components": [
+              "pdf_peak-1",
+              "pdf_peak-2",
+              {
+                "order": "random",
+                "components": [
+                  "pdf_peak-3",
+                  "pdf_peak-4",
+                  "pdf_peak-5",
+                  "pdf_peak-6",
+                  "pdf_peak-7",
+                  "pdf_peak-8"
+                ]
+              }
+            ]
+          },
+          {
+            "order": "fixed",
+            "components": [
+              "pdf_area-1",
+              "pdf_area-2",
+              {
+                "order": "random",
+                "components": [
+                  "pdf_area-3",
+                  "pdf_area-4",
+                  "pdf_area-5",
+                  "pdf_area-6",
+                  "pdf_area-7",
+                  "pdf_area-8"
+                ]
+              }
+            ]
+          },
+          {
+            "order": "fixed",
+            "components": [
+              "dot_axis-1",
+              "dot_axis-2",
+              {
+                "order": "random",
+                "components": [
+                  "dot_axis-3",
+                  "dot_axis-4",
+                  "dot_axis-5",
+                  "dot_axis-6",
+                  "dot_axis-7",
+                  "dot_axis-8"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "finish"
+    ]
+  }
+}
